@@ -23,4 +23,5 @@ Route::post('/login', [AuthController::class, 'loginUser'])->name('user.login');
 Route::middleware('auth:sanctum')->prefix('/v1')->group(function () {
     Route::apiResource('/user', UserController::class);
     Route::apiResource('/category', CategoryController::class);
+    Route::apiResource('/product', ProductController::class);
 });

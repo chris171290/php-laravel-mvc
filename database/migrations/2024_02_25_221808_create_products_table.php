@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('name', 100);
             $table->string('description', 2000);
             //packed
-            $table->float('packed_weigh t',8,2)->default(0);;
+            $table->float('packed_weight',8,2)->default(0);;
             $table->float('packed_height',8,2)->default(0);;
             $table->float('packed_width',8,2)->default(0);;
             $table->float('packed_depth',8,2)->default(0);;
@@ -44,7 +44,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categories');
         Schema::dropIfExists('products');
+        Schema::dropIfExists('categories');
     }
 };
