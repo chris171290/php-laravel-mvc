@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +22,5 @@ Route::post('/login', [AuthController::class, 'loginUser'])->name('user.login');
 
 Route::middleware('auth:sanctum')->prefix('/v1')->group(function () {
     Route::apiResource('/user', UserController::class);
+    Route::apiResource('/category', CategoryController::class);
 });
