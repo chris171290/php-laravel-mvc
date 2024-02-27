@@ -75,7 +75,7 @@ class CategoryController extends Controller
 
         $response = [
             'status' => 'success',
-            'message' => 'Category is updated successfully.',
+            'message' => 'Category is deleted successfully.',
         ];
 
         return response()->json($response, 200);
