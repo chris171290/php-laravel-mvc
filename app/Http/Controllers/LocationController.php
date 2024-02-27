@@ -51,8 +51,17 @@ class LocationController extends Controller
     public function update(UpdateLocationRequest $request, string $id)
     {
         $location = Location::find($id);
+
+        if (!isset($location)) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Location not found.'
+            ], 404);
+        }
+
         $location->name = $request->name;
         $location->address = $request->address;
+        $location->save();
 
         $response = [
             'status' => 'success',
