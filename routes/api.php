@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
@@ -28,4 +29,5 @@ Route::middleware('auth:sanctum')->prefix('/v1')->group(function () {
     Route::apiResource('/product', ProductController::class);
     Route::apiResource('/location', LocationController::class);
     Route::apiResource('/warehouse', WarehouseController::class);
+    Route::apiResource('/inventory', InventoryController::class);
 });
