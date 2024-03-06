@@ -14,7 +14,7 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        $inventory = Inventory::all();
+        $inventory = Inventory::list();
         return response()->json($inventory, 200);
     }
 
