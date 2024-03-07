@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProviderController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WarehouseController;
 use Illuminate\Support\Facades\Route;
@@ -30,4 +31,5 @@ Route::middleware('auth:sanctum')->prefix('/v1')->group(function () {
     Route::apiResource('/location', LocationController::class);
     Route::apiResource('/warehouse', WarehouseController::class);
     Route::apiResource('/inventory', InventoryController::class);
+    Route::apiResource('/provider', ProviderController::class);
 });
