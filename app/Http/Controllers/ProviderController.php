@@ -67,7 +67,7 @@ class ProviderController extends Controller
 
         $response = [
             'status' => 'success',
-            'message' => 'Inventory is updated successfully.',
+            'message' => 'Provider is updated successfully.',
             'data' => $provider,
         ];
 
